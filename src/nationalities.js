@@ -13,6 +13,8 @@ const COUNTRY_MAPPING = {
     'gb': {flag: ':flag_gb:', name: 'United Kingdom'},
     'nl': {flag: ':flag_nl:', name: 'Netherlands'},
     'au': {flag: ':flag_au:', name: 'Australia'},
+    'ru': {flag: ':flag_ru:', name: 'Russia'},
+    'fi': {flag: ':flag_fi:', name: 'Finland'},
     'tr': {flag: ':flag_tr:', name: 'Turkey'},
     'jp': {flag: ':flag_jp:', name: 'Japan'}
 }

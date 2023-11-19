@@ -1,4 +1,4 @@
-const { Discord, EmbedBuilder } = require('discord.js');
+const {Discord, EmbedBuilder} = require('discord.js');
 const fetch = require('node-fetch');
 const pkg = require('jsdom');
 const utils = require('./utils.js');
@@ -105,14 +105,18 @@ module.exports = async (strackerUrl, description, name) => {
         })
     }
 
-	const timeStamp = new Date();
+    const timeStamp = new Date();
     return new EmbedBuilder()
         .setColor('#42e3f5')
         .setTitle('Leaderboard Link')
         .setDescription(description)
         .setURL(strackerUrl)
         .setThumbnail('https://cdn.discordapp.com/attachments/1055890908761038900/1062129961881849986/al-klein.png')
-        .setAuthor({ name: name.startsWith('Leaderboard') ? name : 'Leaderboard: ' + name, iconURL: 'https://cdn.discordapp.com/attachments/1055890908761038900/1062129961881849986/al-klein.png', url: 'https://lucscripts.nl' })
+        .setAuthor({
+            name: name.startsWith('Leaderboard') ? name : 'Leaderboard: ' + name,
+            iconURL: 'https://cdn.discordapp.com/attachments/1055890908761038900/1062129961881849986/al-klein.png',
+            url: 'https://lucscripts.nl'
+        })
         .addFields(finalFields)
         .setTimestamp(timeStamp)
 }
@@ -141,7 +145,11 @@ const unavailableMessage = (description, strackerUrl, name) => {
         .setTitle('Leaderboard Link')
         .setDescription(description)
         .setThumbnail('https://cdn.discordapp.com/attachments/1055890908761038900/1062129961881849986/al-klein.png')
-        .setAuthor({ name: name.startsWith('Leaderboard') ? name : 'Leaderboard: ' + name, iconURL: 'https://cdn.discordapp.com/attachments/1055890908761038900/1062129961881849986/al-klein.png', url: 'https://lucscripts.nl' })
+        .setAuthor({
+            name: name.startsWith('Leaderboard') ? name : 'Leaderboard: ' + name,
+            iconURL: 'https://cdn.discordapp.com/attachments/1055890908761038900/1062129961881849986/al-klein.png',
+            url: 'https://lucscripts.nl'
+        })
         .setURL(strackerUrl)
         .addField('Oh no', 'The leaderboard is currently unavailable. Try checking back again later')
         .setTimestamp(timeStamp)
