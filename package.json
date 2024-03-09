@@ -14,6 +14,7 @@
     "cmds": "0.0.3",
     "discord.js": "^14.7.1",
     "dotenv": "^10.0.0",
+    "easy-table": "^1.2.0",
     "fs": "0.0.1-security",
     "jsdom": "^16.6.0",
     "node": "^16.1.0",
